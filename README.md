@@ -45,7 +45,6 @@ Set `hidden: true` on any sheet you want hidden in the resulting workbook. The d
 ## Limitations
 
 - **At least one sheet must remain visible.** Excel requires this — a workbook with every sheet hidden either fails to open or shows a recovery error. If the caller marks _every_ sheet as hidden, this feature does nothing rather than producing a broken file. The base library's output (all sheets visible) is kept as a safe fallback. Validate caller input upstream if you want to surface a clearer error.
-- **Browser bundle.** Not yet tested against `write-excel-file/browser`. The feature only patches `xl/workbook.xml` (a string), so it should work identically — but the examples here only exercise the Node entry point.
 
 ## How it works
 
