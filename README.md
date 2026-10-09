@@ -66,9 +66,9 @@ See [`src/hideSheets.ts`](./src/hideSheets.ts) for the implementation.
 The [`examples/`](./examples) folder contains runnable TypeScript scripts that emit `.xlsx` files next to themselves. Open the generated files in Excel/Numbers/LibreOffice to confirm the hidden sheets behave as expected.
 
 ```sh
-npm install
-npx tsx examples/hide-second-sheet.ts   # run a single example
-npm run examples                          # run them all
+pnpm install
+pnpm exec tsx examples/hide-second-sheet.ts # run a single example
+pnpm run examples                           # run them all
 ```
 
 See [`examples/README.md`](./examples/README.md) for the full list.
@@ -76,10 +76,10 @@ See [`examples/README.md`](./examples/README.md) for the full list.
 ## Development
 
 ```sh
-npm install
-npm test          # vitest
-npm run typecheck # tsc --noEmit
-npm run build     # emit dist/ via tsc
+pnpm install
+pnpm test          # vitest
+pnpm run typecheck # tsc --noEmit
+pnpm run build     # emit dist/ via tsc
 ```
 
 ## License

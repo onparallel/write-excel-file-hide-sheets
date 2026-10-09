@@ -12,37 +12,40 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: "24"
-          cache: npm
-      - run: npm ci
-      - run: npm run typecheck
-      - run: npm test
-      - run: npm run build
-      - run: npm run check:exports
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run typecheck
+      - run: pnpm test
+      - run: pnpm run build
+      - run: pnpm run check:exports
 
   examples:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: "24"
-          cache: npm
-      - run: npm ci
-      - run: npm run examples
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run examples
       - name: Verify examples/*.xlsx contents match HEAD
-        run: npm run examples:check
+        run: pnpm run examples:check
 
   format:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: "24"
-          cache: npm
-      - run: npm ci
-      - run: npm run format:check
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run format:check
