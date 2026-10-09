@@ -1,6 +1,6 @@
 {
   "name": "@onparallel/write-excel-file-hide-sheets",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Hide sheets custom feature for write-excel-file",
   "type": "module",
   "main": "./dist/index.js",
