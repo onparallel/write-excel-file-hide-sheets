@@ -55,11 +55,11 @@
     "write-excel-file": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1",
-    "prettier": "^3.8.3",
-    "tsx": "^4.22.4",
-    "typescript": "^6.0.3",
-    "vitest": "^4.1.8",
-    "write-excel-file": "^4.0.7"
+    "@types/node": "^26.6.4",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3",
+    "write-excel-file": "^4.1.1"
   }
 }
